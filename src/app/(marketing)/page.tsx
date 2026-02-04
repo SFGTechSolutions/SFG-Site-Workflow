@@ -21,11 +21,11 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-white/80 backdrop-blur-md transition-all duration-300">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between relative">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
               <div className="hover:opacity-80 transition-opacity">
                 <Logo size="md" variant="full" />
               </div>
-              <a href="https://agent-6982dbe2550252d2d721c5c--sfg-site-workflow.netlify.app/" target="_blank" rel="noopener noreferrer" className="ml-1">
+              <a href="https://agent-6982dbe2550252d2d721c5c--sfg-site-workflow.netlify.app/" target="_blank" rel="noopener noreferrer" className="ml-1 md:ml-0 block">
                 <img
                   src="https://i.postimg.cc/tJHyDTnJ/Deploy-by-(1).png"
                   alt="Deployed by"
