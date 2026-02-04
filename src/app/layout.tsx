@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
@@ -13,6 +13,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Site Buddy | Intelligent Construction Workflow Management",
   description: "AI-powered construction workflow platform with voice notes, document processing, and real-time collaboration for field teams",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Site Buddy",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#2563EB",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
