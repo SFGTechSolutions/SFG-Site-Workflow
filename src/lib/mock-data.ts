@@ -20,12 +20,12 @@ export const MOCK_JOBS: Job[] = [
         updatedAt: new Date(),
         priority: 'High',
         jobValue: '$40,250.00',
-        workDescription: 'Shutdown support - conveyor access, working at heights permit control, and rescue readiness.',
+
         notes: 'Shutdown support - conveyor access, working at heights permit control, and rescue readiness. Working at heights, risk classification high.',
         location: {
             latitude: -20.7256,
             longitude: 139.4927,
-            lastUpdated: new Date()
+            capturedAt: new Date()
         }
     },
     {

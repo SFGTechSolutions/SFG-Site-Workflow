@@ -352,17 +352,12 @@ export function CardFooter({ children }: { children: ReactNode }) {
 // BUTTON
 // ============================================
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     variant?: 'primary' | 'secondary' | 'ghost';
     size?: 'sm' | 'md' | 'lg';
     icon?: ReactNode;
     loading?: boolean;
-    disabled?: boolean;
-    onClick?: () => void;
-    type?: 'button' | 'submit';
-    className?: string;
-    style?: React.CSSProperties;
 }
 
 export function Button({
@@ -371,11 +366,9 @@ export function Button({
     size = 'md',
     icon,
     loading = false,
-    disabled = false,
-    onClick,
-    type = 'button',
     className = '',
-    style,
+    disabled,
+    ...props
 }: ButtonProps) {
     const sizeClasses = {
         sm: 'px-3 py-1.5 text-xs',
@@ -391,7 +384,6 @@ export function Button({
 
     return (
         <button
-            type={type}
             className={`
                 inline-flex items-center justify-center gap-2 font-medium rounded-lg border transition-all whitespace-nowrap
                 ${sizeClasses[size]}
@@ -399,9 +391,8 @@ export function Button({
                 ${disabled || loading ? 'opacity-60 cursor-not-allowed' : ''}
                 ${className}
             `}
-            onClick={onClick}
             disabled={disabled || loading}
-            style={style}
+            {...props}
         >
             {loading ? (
                 <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
