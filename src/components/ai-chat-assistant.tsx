@@ -209,8 +209,8 @@ export function AIChatAssistant({ onNoteAdded, onAdvanceWorkflow }: AIChatAssist
     const handleAnalysisChoice = (type: 'concise' | 'summary') => {
         setAnalysisPreference(type);
         const promptText = type === 'concise'
-            ? 'Identify key safety hazards (Concise List)'
-            : 'Detailed safety hazard summary and risk assessment';
+            ? 'Identify key safety hazards. Keep it concise and use natural spoken language. Do NOT use bullet points, dashes, or markdown lists.'
+            : 'Detailed safety hazard summary and risk assessment. Write this as a natural spoken narrative. Do NOT use bullet points, headers, or markdown formatting.';
         sendMessage(promptText, selectedImage || undefined);
         setAnalysisPreference(null);
     };
@@ -248,10 +248,10 @@ export function AIChatAssistant({ onNoteAdded, onAdvanceWorkflow }: AIChatAssist
                                         
                                         Start with the most critical issues you see, then mention what looks good. Speak in full sentences as if you were talking to someone right next to you.
                                         
-                                        Cover things like PPE, fall risks, electrical hazards, and trip hazards, but don't just list them. Explain WHY they are issues and what needs to be done.
+                                        Cover things like PPE, fall risks, electrical hazards, and trip hazards. Explain WHY they are issues.
                                         
-                                        Keep it helpful, authoritative, but friendly.`
-                                        : 'Analyze this image and describe what you see. If it appears to be work-related (maintenance, construction, equipment), provide relevant observations.')
+                                        IMPORTANT: Do NOT use bullet points, dashes, list formats, or markdown. Keep the response concise, clear, and easy to listen to.`
+                                        : 'Analyze this image and describe what you see. Provide relevant observations in a concise, natural spoken paragraph. Do NOT use bullet points or list formats.')
                                 },
                                 {
                                     inline_data: {
