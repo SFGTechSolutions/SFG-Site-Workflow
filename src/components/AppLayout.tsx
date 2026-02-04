@@ -214,6 +214,16 @@ export function AppLayout({ children }: AppLayoutProps) {
                     </button>
 
                     <div className="flex-1 flex justify-end md:justify-start">
+                        {/* Mobile Center Logo */}
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden">
+                            <a href="https://agent-6982dbe2550252d2d721c5c--sfg-site-workflow.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src="https://i.postimg.cc/tJHyDTnJ/Deploy-by-(1).png"
+                                    alt="Deployed by"
+                                    className="h-8 w-auto object-contain"
+                                />
+                            </a>
+                        </div>
                         <div className="w-full max-w-lg lg:max-w-xs relative text-neutral-500 focus-within:text-neutral-600 hidden md:block">
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <Search size={18} />
