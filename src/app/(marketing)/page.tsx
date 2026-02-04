@@ -26,9 +26,9 @@ export default function LandingPage() {
             {/* Center Logo */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
               <img
-                src="https://i.postimg.cc/3ND7FGwJ/Deploy-by.png"
+                src="https://i.postimg.cc/tJHyDTnJ/Deploy-by-(1).png"
                 alt="Deployed by"
-                className="h-8 w-auto object-contain"
+                className="h-40 w-auto object-contain"
               />
             </div>
 
