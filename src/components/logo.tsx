@@ -12,7 +12,12 @@ export function Logo({ size = 'md', variant = 'full', className = '' }: LogoProp
     };
 
     return (
-        <div className={`flex items-center gap-3 ${className}`}>
+        <a
+            href="https://agent-6982dbe2550252d2d721c5c--sfg-site-workflow.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-3 ${className}`}
+        >
             <span className="text-xs font-medium text-neutral-400 uppercase tracking-wider">
                 Built and Powered by
             </span>
@@ -21,6 +26,6 @@ export function Logo({ size = 'md', variant = 'full', className = '' }: LogoProp
                 alt="Site Buddy Logo"
                 className={`${sizeClasses[size]} w-auto object-contain`}
             />
-        </div>
+        </a>
     );
 }
