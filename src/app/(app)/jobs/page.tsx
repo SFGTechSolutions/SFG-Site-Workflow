@@ -127,8 +127,8 @@ export default function JobsPage() {
                         )
                     }
                 >
-                    <div className="flex items-center gap-4">
-                        <div className="relative min-w-[300px]">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <div className="relative flex-1">
                             <Search
                                 size={18}
                                 className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400"
@@ -168,10 +168,10 @@ export default function JobsPage() {
                                 <thead className="bg-neutral-50 border-b border-neutral-200">
                                     <tr>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Work Order</th>
-                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Client</th>
-                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Status</th>
-                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Current Step</th>
-                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Scheduled</th>
+                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden sm:table-cell">Client</th>
+                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden sm:table-cell">Status</th>
+                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden md:table-cell">Current Step</th>
+                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden lg:table-cell">Scheduled</th>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider w-10"></th>
                                     </tr>
                                 </thead>

@@ -66,7 +66,7 @@ export function WorkflowStepper({ currentStep, currentState }: WorkflowStepperPr
     const isError = ['AWAITING_INFO', 'ACCESS_ISSUE', 'WORK_STOPPED', 'INVOICE_DISPUTED', 'DOCS_RETURNED'].includes(currentState);
 
     return (
-        <div className="flex items-center gap-0 py-4 overflow-x-auto w-full">
+        <div className="flex items-center gap-0 py-4 overflow-x-auto w-full no-scrollbar px-1">
             {WORKFLOW_STEPS.map((step, index) => {
                 const isCompleted = index < currentIndex;
                 const isActive = index === currentIndex;
@@ -491,16 +491,25 @@ export function JobRow({ workOrderRef, clientName, status, currentStep, schedule
     return (
         <tr onClick={onClick} className="cursor-pointer hover:bg-neutral-50 transition-colors border-b border-neutral-100 last:border-0 group">
             <td className="p-4 align-middle">
-                <strong className="text-neutral-900 font-medium text-sm sm:text-base">{workOrderRef}</strong>
+                {/* Mobile View: Stacked */}
+                <div className="flex flex-col sm:hidden gap-1">
+                    <div className="flex items-center justify-between">
+                        <strong className="text-neutral-900 font-medium text-sm">{workOrderRef}</strong>
+                        <StatusPill status={status} />
+                    </div>
+                    <div className="text-sm text-neutral-600">{clientName}</div>
+                </div>
+                {/* Desktop View */}
+                <strong className="text-neutral-900 font-medium text-sm sm:text-base hidden sm:block">{workOrderRef}</strong>
             </td>
-            <td className="p-4 align-middle text-neutral-700 text-sm sm:text-base">{clientName}</td>
+            <td className="p-4 align-middle text-neutral-700 text-sm sm:text-base hidden sm:table-cell">{clientName}</td>
             <td className="p-4 align-middle hidden sm:table-cell">
                 <StatusPill status={status} />
             </td>
             <td className="p-4 align-middle text-sm text-neutral-600 font-medium hidden md:table-cell">{step?.label || currentStep}</td>
             <td className="p-4 align-middle text-sm text-neutral-500 hidden lg:table-cell">{formatDate(scheduledDate)}</td>
-            <td className="p-4 align-middle">
-                <div className="flex items-center gap-2">
+            <td className="p-4 align-middle text-right sm:text-left">
+                <div className="flex items-center justify-end sm:justify-start gap-2">
                     {onDelete && (
                         <button
                             onClick={(e) => { e.stopPropagation(); onDelete(e); }}

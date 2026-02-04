@@ -226,7 +226,7 @@ export default function JobDetailPage() {
     return (
         <div className="space-y-6">
             {/* Header */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                 <div className="flex items-center gap-4">
                     <Button variant="ghost" onClick={() => router.push('/dashboard')}>
                         <ArrowLeft size={18} />
@@ -237,15 +237,17 @@ export default function JobDetailPage() {
                         </h1>
                         <p className="text-neutral-500 m-0">{job.clientName}</p>
                     </div>
-                    <StatusPill status={job.status} />
                 </div>
-                <div className="flex gap-2">
-                    <Button variant="secondary" icon={<Edit size={16} />}>
-                        Edit
-                    </Button>
-                    <Button variant="ghost" className="btn-icon">
-                        <MoreHorizontal size={20} />
-                    </Button>
+                <div className="flex items-center justify-between sm:justify-end gap-2 pl-4 sm:pl-0">
+                    <StatusPill status={job.status} />
+                    <div className="flex gap-2">
+                        <Button variant="secondary" icon={<Edit size={16} />}>
+                            Edit
+                        </Button>
+                        <Button variant="ghost" className="btn-icon">
+                            <MoreHorizontal size={20} />
+                        </Button>
+                    </div>
                 </div>
             </div>
 
