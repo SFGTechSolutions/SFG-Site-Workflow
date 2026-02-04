@@ -29,7 +29,7 @@ export default function LandingPage() {
                 <img
                   src="https://i.postimg.cc/tJHyDTnJ/Deploy-by-(1).png"
                   alt="Deployed by"
-                  className="h-20 w-auto object-contain"
+                  className="h-28 w-auto object-contain"
                 />
               </a>
             </div>
