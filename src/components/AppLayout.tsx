@@ -256,6 +256,17 @@ export function AppLayout({ children }: AppLayoutProps) {
                         </div>
                     )}
 
+                    {/* Deployed By Logo - Dashboard Header */}
+                    <div className="hidden md:flex items-center mr-4">
+                        <a href="https://agent-6982dbe2550252d2d721c5c--sfg-site-workflow.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="https://i.postimg.cc/tJHyDTnJ/Deploy-by-(1).png"
+                                alt="Deployed by"
+                                className="h-12 w-auto object-contain"
+                            />
+                        </a>
+                    </div>
+
                     <div className="flex items-center gap-2 sm:gap-4">
                         <button className="relative p-2 text-neutral-400 hover:text-neutral-500 transition-colors">
                             <Bell size={20} />
