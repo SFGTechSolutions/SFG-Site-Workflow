@@ -20,8 +20,18 @@ export default function LandingPage() {
       {/* Navigation - Sticky & Glass */}
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-white/80 backdrop-blur-md transition-all duration-300">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between relative">
             <Logo size="md" variant="full" />
+
+            {/* Center Logo */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
+              <img
+                src="https://i.postimg.cc/3ND7FGwJ/Deploy-by.png"
+                alt="Deployed by"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+
             <div className="flex items-center gap-4">
               <Link
                 href="/login"
