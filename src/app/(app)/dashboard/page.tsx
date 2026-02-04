@@ -205,7 +205,7 @@ export default function DashboardPage() {
                                 <thead className="bg-neutral-50 border-b border-neutral-200">
                                     <tr>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Work Order</th>
-                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider">Client</th>
+                                        <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden sm:table-cell">Client</th>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden sm:table-cell">Status</th>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden md:table-cell">Current Step</th>
                                         <th className="px-6 py-3 text-xs font-semibold text-neutral-500 uppercase tracking-wider hidden lg:table-cell">Scheduled</th>
